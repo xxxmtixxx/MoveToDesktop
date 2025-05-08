@@ -22,7 +22,7 @@ This script provides two essential keyboard shortcuts:
 - Maximizes the window
 
 **Win+Alt+N**: 
-- Moves the current window back to Desktop 1 (main desktop)
+- Moves all windows on the current desktop back to Desktop 1 (main desktop)
 - Switches to Desktop 1
 - Closes the desktop you came from
 
