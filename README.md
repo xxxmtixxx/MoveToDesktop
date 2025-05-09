@@ -2,49 +2,63 @@
 
 A simple, efficient script that enhances Windows 11 virtual desktop management with application-specific naming.
 
-## Installation
+---
+
+## 📥 Installation
 
 1. **Install AutoHotkey v1.1** from [autohotkey.com](https://www.autohotkey.com/)
-2. **Download VD.ahk** from [https://github.com/FuPeiJiang/VD.ahk](https://github.com/FuPeiJiang/VD.ahk)
-3. **Download MoveToDesktopWin11.ahk** from [https://github.com/xxxmtixxx/MoveToDesktop/blob/main/MoveToDesktopWin11.ahk](https://github.com/xxxmtixxx/MoveToDesktop/blob/main/MoveToDesktopWin11.ahk)
+2. **Download VD.ahk** from [VD.ahk GitHub](https://github.com/FuPeiJiang/VD.ahk)
+3. **Download MoveToDesktopWin11.ahk** from [MoveToDesktop GitHub](https://github.com/xxxmtixxx/MoveToDesktop/blob/main/MoveToDesktopWin11.ahk)
 4. **Place both files** in the `C:\AutoHotkey` folder (create this folder if it doesn't exist)
-5. **Run the script** by double-clicking MoveToDesktopWin11.ahk
+5. **Run the script** by double-clicking `MoveToDesktopWin11.ahk`
 
-## Features
+---
 
-This script provides two essential keyboard shortcuts:
+## ⚙️ Features
 
-**Win+Alt+M**: 
-- Creates a new desktop
-- Names the desktop after the application (e.g., "Chrome", "Firefox", "Word")
-- Moves the current window to the new desktop
-- Switches to the new desktop
-- Maximizes the window
+### **Win+Alt+M – Move Window to New Desktop**
 
-**Win+Alt+N**: 
-- Moves all windows on the current desktop back to Desktop 1 (main desktop)
-- Switches to Desktop 1
-- Closes the desktop you came from
+* Creates a new virtual desktop
+* Names the desktop after the application (e.g., "Chrome", "Word")
+* Moves the current window to the new desktop
+* Switches to the new desktop
+* Maximizes the window
 
-## How Desktop Naming Works
+### **Win+Alt+N – Move Back and Close Current Desktop**
 
-The script takes the process name (e.g., "chrome.exe"), removes the ".exe" extension, capitalizes the first letter, and uses that as the desktop name. This gives you clean, simple names like "Chrome" or "Word" for your virtual desktops.
+* Moves all windows on the current desktop back to Desktop 1 (main desktop)
+* Switches to Desktop 1
+* Closes the desktop you came from
 
-## Auto-Startup
+### **NEW! Win+Alt+V – Consolidate All Desktops**
 
-To make the script run automatically when Windows starts:
+* Moves *all windows* from *all desktops* back to Desktop 1
+* Closes all other desktops
+* No confirmation or alerts – silent and fast cleanup
+
+---
+
+## 📝 How Desktop Naming Works
+
+The script extracts the process name (e.g., `chrome.exe`), removes the `.exe` extension, capitalizes the first letter, and sets that as the desktop name. This results in clean, intuitive names like **"Chrome"**, **"Outlook"**, or **"Word"** for each virtual desktop.
+
+---
+
+## 🚀 Auto-Startup
 
 1. Press **Win+R**
 2. Type `shell:startup` and press Enter
-3. This opens your personal Startup folder
-4. Create a shortcut to your script file in this folder:
-   - Right-click in the Startup folder → New → Shortcut
-   - Type the full path to your script: `C:\AutoHotkey\MoveToDesktopWin11.ahk`
-   - Click Next, then Finish
-5. The script will now run automatically each time you log in to Windows
+3. In the Startup folder, create a shortcut to the script:
 
-## Requirements
+   * Right-click → **New → Shortcut**
+   * Enter: `C:\AutoHotkey\MoveToDesktopWin11.ahk`
+   * Click **Next**, then **Finish**
+4. The script will now launch automatically when you log in.
 
-- Windows 11
-- AutoHotkey v1.1
-- VD.ahk library
+---
+
+## 📚 Requirements
+
+* Windows 11
+* AutoHotkey v1.1
+* VD.ahk library
