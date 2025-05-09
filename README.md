@@ -38,9 +38,24 @@ A simple, efficient script that enhances Windows 11 virtual desktop management w
 
 ---
 
-## 📝 How Desktop Naming Works
+### 📝 How Desktop Naming Works
 
-The script extracts the process name (e.g., `chrome.exe`), removes the `.exe` extension, capitalizes the first letter, and sets that as the desktop name. This results in clean, intuitive names like **"Chrome"**, **"Outlook"**, or **"Word"** for each virtual desktop.
+The script dynamically generates desktop names using the following logic:
+
+1. **Primary Method – Window Title Parsing:**
+
+   * It first tries to extract a meaningful name from the active window’s title by analyzing common patterns, such as using the portion after a hyphen or other separators.
+
+2. **Secondary Method – Executable Metadata:**
+
+   * If the window title doesn’t produce a usable name, the script attempts to read the **File Description** from the application’s executable metadata.
+
+3. **Fallback – Process Name:**
+
+   * If no descriptive title or metadata is available, it defaults to using the process name (e.g., `appname.exe`), removes the `.exe` extension, and capitalizes the first letter.
+   * Example: `ms-teams.exe` becomes **"Ms-teams"**.
+
+> 📌 *Note:* Some modern applications don’t expose clean metadata or window titles, resulting in desktop names that reflect the internal process name rather than a user-friendly app name.
 
 ---
 
